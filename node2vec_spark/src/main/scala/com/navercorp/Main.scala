@@ -14,7 +14,7 @@ object Main {
 
   case class Params(iter: Int = 10,
                     lr: Double = 0.025,
-                    numPartition: Int = 10,
+                    numPartition: Int = 8,
                     dim: Int = 128,
                     window: Int = 10,
                     walkLength: Int = 80,
@@ -39,6 +39,9 @@ object Main {
     opt[Int]("numWalks")
             .text(s"numWalks: ${defaultParams.numWalks}")
             .action((x, c) => c.copy(numWalks = x))
+    opt[Int]("dim")
+      .text(s"dim: ${defaultParams.dim}")
+      .action((x, c) => c.copy(dim = x))
     opt[Double]("p")
             .text(s"return parameter p: ${defaultParams.p}")
             .action((x, c) => c.copy(p = x))
@@ -54,6 +57,12 @@ object Main {
     opt[Int]("degree")
             .text(s"degree: ${defaultParams.degree}")
             .action((x, c) => c.copy(degree = x))
+    opt[Int]("iter")
+      .text(s"iter: ${defaultParams.iter}")
+      .action((x, c) => c.copy(iter = x))
+    opt[Int]("numPartition")
+      .text(s"numPartition: ${defaultParams.numPartition}")
+      .action((x, c) => c.copy(numPartition = x))
     opt[Boolean]("indexed")
             .text(s"Whether nodes are indexed or not: ${defaultParams.indexed}")
             .action((x, c) => c.copy(indexed = x))
