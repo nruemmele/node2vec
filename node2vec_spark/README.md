@@ -94,8 +94,8 @@ The output file (number of nodes)*numWalks random paths as follows:
 ### Embedding random paths
 Example:
 	
-	./spark-submit --class com.navercorp.Main \
-				   ./node2vec_spark/target/node2vec-0.0.1-SNAPSHOT.jar \
+        ./spark-submit --class com.navercorp.Main \
+                       ./node2vec_spark/target/node2vec-0.0.1-SNAPSHOT.jar \
 				   --cmd embedding --dim 50 --iter 20 \
 				   --input <input> --nodePath <node2id_path> --output <output>
 
