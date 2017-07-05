@@ -299,6 +299,7 @@ def read_yelp_review(file_path, business_ids=None):
 # TODO: read tips
 # TODO: read checkins
 
+
 def write_edge_lists(user_review, review_business, review_keyword, filepath):
     """
     Write edge list for heterogeneous network to the file.
